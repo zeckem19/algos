@@ -6,7 +6,6 @@ class Knapsack:
 		self.capacityOfKnapsack = capacityOfKnapsack
 		self.weightOfItems = weightOfItems
 		self.profitOfItems = profitOfItems
-<<<<<<< HEAD
 		self.dpTable = [[0 for x in range(capacityOfKnapsack+1)] for x in range(numOfItems+1)]
 	
 	def dynamicProgrammingApproach(self):
@@ -24,31 +23,6 @@ class Knapsack:
 				
 				self.dpTable[i][w] = max( notTakingItem, takingItem )
 		
-=======
-		self.dpTable = [[0 for w in self.capacityOfKnapsack+1] for i in numOfItems+1]
-	
-	def dynamicProgrammingApproach(self):
-		
-		# no need to initialize because there are 0s by default !!!
-		for w in range(1, capacityOfKnapsack+1):
-			for n in range(1,numOfItems+1):
-				#Don't take
-				notTakingItem = self.dpTable[n-1][w]
-
-				# take item
-				prevItemWeight = w - weightOfItems[n]
-
-				takingItem = 0
-				#check if item can fit bag. if prev item weight is -ve means bag cant fit!
-				if prevItemWeight >= 0:
-					# check if value of prev item inside bag
-					prevVal = self.dpTable[n-1][prevItemWeight]
-					currentVal = self.profitOfItems[n]
-					takingItem = currentVal + prevVal
-				self.dpTable[n][w] = max(takingItem, notTakingItem)
-
-
->>>>>>> origin/work
 	def showResult(self):
 
 		print("Total benefit: %d" % self.dpTable[self.numOfItems][self.capacityOfKnapsack])
