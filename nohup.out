@@ -1,0 +1,4 @@
+usage: jupyter [-h] [--version] [--config-dir] [--data-dir] [--runtime-dir]
+               [--paths] [--json]
+               [subcommand]
+jupyter: error: one of the arguments --version subcommand --config-dir --data-dir --runtime-dir --paths is required
