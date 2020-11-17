@@ -267,4 +267,3 @@ avl.insert(1)
 avl.remove(6)
 
 avl.traverse()
-pq = [(0,3),(1,4),(1,5),(0,2)]
